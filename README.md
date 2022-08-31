@@ -1,4 +1,4 @@
-## Why i'm creating this video
+## Why i'm creating this project / video
 
 Recently i started a personal project which involves creating
 a Max 4 Live device with dynamic interface and after finding a few limitations
@@ -8,7 +8,7 @@ about how he would go about solving this problem.
 Federico "amazingly" replied to my message in no time and just a few days
 after published a video showing how to do it using javascript.
 
-You can watch the video here:
+You can watch his video here:
 https://www.youtube.com/watch?v=4uO6Ft4WuUQ&ab_channel=AmazingMaxStuff
 
 After watching his video and learning about max msp's js function: "getvalueof"
@@ -16,12 +16,12 @@ and "setvalueof" i thought it would be a good idea to retribute some of the love
 Federico have put into the community by creating a video which will hopefully
 help fellow javascripters improve their patches.
 
-Without fuder ado let's jump into the project and see how we could improve 
+Without further ado let's jump into the project and see how we could improve 
 the javascript part.
 
 ## Refactoring Feederico javascript
 
- -> At 2:44 federico says "We going to create a class"
+ -> At 2:35 federico says "We going to create a class"
 
  In reality there is ( or at least there was ) no "class" in javascript [...]
 
@@ -43,14 +43,14 @@ the javascript part.
 
  By removing this "class" idea we can start working in a more oiled way that
  will make things like the "this." operator disappear and our mind as js
- developer expand. Thinking about functions is the way to go.
+ developer expand. 
+ 
+ Thinking of code as single independent functions is the way to go ( more
+ on that another time )
 
  -> add 80 characters ruler
 
  -> Default value for parameters
-
- For instance on createMultiSlider we can have a default value of 3 for the
- numberOfSliders parameter.
 
  -> storing data on a variable state an using the length of the array
  as index
@@ -62,9 +62,9 @@ the javascript part.
  -> "patcher" is global! patcher everywhere!
    https://docs.cycling74.com/max8/vignettes/jsglobal
 
-then try creating a function inside of a function and call "this.patcher" or call
-the "patcher" object. will it work?
-
+  so basically we can call "patcher" anywhere in the code if we don't use 
+  the "this." when calling "patcher".
+ 
 ## One big limitation of dynamic UI with Max 4 Live
 
  -> If you add live.* objects via this.patcher they won't be automatable as in:
@@ -80,11 +80,22 @@ the "patcher" object. will it work?
 Federico's video on dynamic interfaces:
 https://www.youtube.com/watch?v=4uO6Ft4WuUQ&ab_channel=AmazingMaxStuff
 
+github repository with the source code:
+https://github.com/hems/m4l-dynamic-interface-js
+
 My 2014 Javascript in Max/MSP presentation:
 http://hems.io/max.js/
 
 JavaScript Live API Tutorials
 http://compusition.com/writings/js-live-api
+
+## Other Max for live js repositories i have contributed to
+
+https://github.com/HerrmuttLobby/chord-splitter
+
+https://github.com/HerrmuttLobby/quantize-to-trigger
+
+https://github.com/HerrmuttLobby/minimun-note-length
 
 ## My personal links:
 
@@ -102,3 +113,8 @@ https://soundcloud.com/hems
 
 Personal website:
 https://hems.io
+
+## tags:
+
+max, msp, max-msp, javascript, js, ableton, live, ableton-live, max4live, 
+max-for-live, audio, programming, sound, dsp, ui

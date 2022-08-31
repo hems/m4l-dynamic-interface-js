@@ -200,7 +200,7 @@ function updateMaxForLiveWidth() {
     var width = 
         settings.offset.x + (settings.dimensions.width + 10) * numberOfSliders
 
-    live.setwidth(width)    
+    live.setwidth(width)
 }
 
 
